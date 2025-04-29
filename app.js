@@ -26,11 +26,11 @@ app.post("/send-message", async (req, res) => {
     const telegramMessage = `
     🧾 Yangi ariza:
 
-    👤 F.I.Sh: ${firstName} ${lastName}
-    📅 Sana: ${new Date().toLocaleString("uz-UZ", { timeZone: "Asia/Tashkent" })}
-    📞 Telefon: ${phone}
-    💬 Xabar: ${message}
-     `;
+👤 F.I.Sh: ${firstName} ${lastName}
+📅 Sana: ${new Date().toLocaleString("uz-UZ", { timeZone: "Asia/Tashkent" })}
+📞 Telefon: ${phone}
+💬 Xabar: ${message}
+`;
 
     const sendToTelegram = async (chatId) => {
         return fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
