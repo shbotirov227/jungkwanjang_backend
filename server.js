@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({ origin: "https://jungkwanjang.uz/" }));
 app.use(express.json());
 
 app.post("/send-message", async (req, res) => {
